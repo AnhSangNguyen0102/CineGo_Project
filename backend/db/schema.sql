@@ -40,7 +40,7 @@ CREATE TABLE movies (
     title varchar(240) NOT NULL,
     description text,
     director varchar(160),
-    cast text,
+    casts text,
     genre varchar(120),
     duration_minutes integer NOT NULL CHECK (duration_minutes > 0),
     language varchar(80),

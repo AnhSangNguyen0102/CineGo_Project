@@ -91,7 +91,7 @@ class MovieOut(BaseModel):
     title: str
     description: str | None
     director: str | None
-    cast: str | None
+    casts: str | None
     genre: str | None
     duration_minutes: int
     language: str | None
@@ -266,7 +266,7 @@ class AdminMovieCreate(BaseModel):
     title: str = Field(min_length=1, max_length=240)
     description: str | None = None
     director: str | None = Field(default=None, max_length=160)
-    cast: str | None = None
+    casts: str | None = None
     genre: str | None = Field(default=None, max_length=120)
     duration_minutes: int = Field(gt=0, le=600)
     language: str | None = Field(default=None, max_length=80)
@@ -288,7 +288,7 @@ class AdminMovieUpdate(BaseModel):
     title: str | None = Field(default=None, min_length=1, max_length=240)
     description: str | None = None
     director: str | None = Field(default=None, max_length=160)
-    cast: str | None = None
+    casts: str | None = None
     genre: str | None = Field(default=None, max_length=120)
     duration_minutes: int | None = Field(default=None, gt=0, le=600)
     language: str | None = Field(default=None, max_length=80)

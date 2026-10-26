@@ -65,7 +65,7 @@ class Movie(Base):
     title: Mapped[str] = mapped_column(String(240), index=True)
     description: Mapped[str | None] = mapped_column(Text)
     director: Mapped[str | None] = mapped_column(String(160))
-    cast: Mapped[str | None] = mapped_column(Text)
+    casts: Mapped[str | None] = mapped_column(Text)
     genre: Mapped[str | None] = mapped_column(String(120), index=True)
     duration_minutes: Mapped[int] = mapped_column(Integer)
     language: Mapped[str | None] = mapped_column(String(80))
